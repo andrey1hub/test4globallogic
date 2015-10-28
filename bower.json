@@ -1,0 +1,20 @@
+{
+  "name": "Test4GlobalLogic",
+  "description": "Test task for GlobalLogic",
+  "authors": [
+    "Andrew Grunsky"
+  ],
+  "license": "CC",
+  "homepage": "https://github.com/andrey1hub/test4globallogic",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
