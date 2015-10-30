@@ -22,9 +22,7 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: 'src/js/*.*',
-                tasks: [
-                    'copy:js'
-                ]
+                tasks: ['copy:js']
             },
             scss: {
                 files: 'src/scss/*.*',
@@ -36,7 +34,7 @@ module.exports = function(grunt) {
             },
             options: {
                 livereload: true,
-                debounceDelay: 1000
+                debounceDelay: 100
             }
         },
         
@@ -52,9 +50,8 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        flatten: true,
-                        cwd: 'src',
-                        src: ['js/*.*'],
+                        cwd: 'src/js',
+                        src: ['*.*'],
                         dest: 'public/js'
                     }
                 ]
@@ -63,7 +60,6 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        flatten: true,
                         cwd: 'src',
                         src: ['*.*'],
                         dest: 'public'
@@ -74,10 +70,10 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        flatten: true,
+                        cwd: 'bower_components/jquery/dist',
                         src: [
-                            'bower_components/jquery/dist/jquery.min.js',
-                            'bower_components/jquery/dist/jquery.min.js.map'
+                            'jquery.min.js',
+                            'jquery.min.map'
                         ],
                         dest: 'public/bower/'
                     }
